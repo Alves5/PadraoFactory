@@ -8,17 +8,12 @@ package factory;
  *
  * @author 1-2021221706
  */
-public class PizzaStore {
-    SimplePizzaFactory factory;
-    
-    public PizzaStore(SimplePizzaFactory factory){
-        this.factory = factory;
-    }
+public abstract class PizzaStore {
     
     public Pizza orderPizza(String type){
         Pizza pizza;
         
-        pizza = factory.createPizza(type);
+        pizza = createPizza(type);
         pizza.preparar();
         pizza.assar();
         pizza.cortar();
@@ -26,4 +21,6 @@ public class PizzaStore {
         
         return pizza;
     }
+
+    abstract Pizza createPizza(String type);
 }

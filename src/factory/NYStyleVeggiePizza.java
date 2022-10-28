@@ -8,11 +8,12 @@ package factory;
  *
  * @author 1-2021221706
  */
-public class PizzaMain {
-    public static void main(String args[]){
-       // PizzaStore p = new PizzaStore(new SimplePizzaFactory());
-       // p.orderPizza("cheese");
-       // System.out.println(p);
+public class NYStyleVeggiePizza extends Pizza{
+     public NYStyleVeggiePizza(){
+        name = "Molho estilo NY e pizza vegetariana";
+        dough = "Massa de borda fina";
+        sauce = "Molho marinado";
         
+        toppings.add("Queijo Reggiano Ralado");
     }
 }
